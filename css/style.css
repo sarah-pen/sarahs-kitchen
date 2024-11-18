@@ -26,6 +26,10 @@ section, footer {
     padding: 8px 32px;
 }
 
+/* ============================= */
+/*         Typography            */
+/* ============================= */
+
 /* --- Heading 1 --- */
 h1 {
     font-family: "Gamja Flower", sans-serif;
@@ -36,6 +40,7 @@ h1 {
     color: var(--secondary);
 }
 
+/* --- Heading 2 --- */
 h2 {
     font-family: "Kantumruy Pro", sans-serif;
     font-optical-sizing: auto;
@@ -45,6 +50,7 @@ h2 {
     font-size: 32px;
 }
 
+/* --- Heading 3 --- */
 h3 {
     font-family: "Kantumruy Pro", sans-serif;
     font-optical-sizing: auto;
@@ -54,10 +60,12 @@ h3 {
     font-size: 24px;
 }
 
+/* --- Paragraph --- */
 p {
     line-height: 1.5em;
     color: var(--contrast);
 }
+
 
 /* ============================= */
 /*           Nav Bar             */
@@ -74,16 +82,15 @@ p {
     grid-template-columns: repeat(4, 1fr);
 }
 
+/* --- Nav Item --- */
 .menu-item {
-    /* border-bottom: 1px solid black; */
-    /* padding: 16px 32px;   */
-    /* display: inline-block;   */
     display: block;
     align-self: center;
     color: black;
     text-decoration: none;
 }
 
+/* --- Nav Icon --- */
 #menu img {
     width: 30px;
     padding: 16px 32px;
@@ -91,7 +98,17 @@ p {
 
 
 /* ============================= */
-/*        Homepage Banner        */
+/*            Footer             */
+/* ============================= */
+
+/* --- Container --- */
+footer {
+    background-color: var(--secondary);
+}
+
+
+/* ============================= */
+/*           Homepage            */
 /* ============================= */
 
 /* --- Container --- */
@@ -118,11 +135,17 @@ p {
     width: 90%;
 }
 
-
+/* --- Recipe Preview --- */
 #recipes-preview, #tips-preview {
     background-color: var(--tertiary);
 }
 
+
+/* ============================= */
+/*         Recipes Page          */
+/* ============================= */
+
+/* --- Recipe Card --- */
 .recipe {
     margin: 32px 0px;
     /* padding: 16px; */
@@ -131,11 +154,13 @@ p {
     background-color: var(--primary);
 }
 
+/* --- Card Text --- */
 .recipe h3, .recipe p {
     margin: 16px 32px;
     color: var(--contrast);
 }
 
+/* --- Card Image --- */
 .recipe img {
     width: 100%;
     height: 240px;
@@ -147,9 +172,78 @@ p {
 
 
 /* ============================= */
-/*            Footer             */
+/*        Essentials Page        */
 /* ============================= */
 
-footer {
-    background-color: var(--secondary);
+
+
+
+
+/* ============================= */
+/*           Tips Page           */
+/* ============================= */
+
+
+
+
+.list {
+    height: 200px;
+    width: 100%;
+  }
+  
+.list li {
+    list-style-type: none;
+
+    width: 200px;
+    height: 200px;
+    opacity: .25;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    border-radius: 16px;
+    background-image: url("../images/zucchini-muffins.jpg");
+    background-position: center;
+    transition: transform 1s, opacity 1s;
+}
+
+.list .act {
+    opacity: 1;
+}
+
+.list .prev, .list .next {
+    cursor: pointer;
+}
+
+.list .prev {
+    transform: translateX(-220px) scale(.85);
+}
+
+.list .next {
+    transform: translateX(220px) scale(.85);
+}
+
+.list .hide {
+    transform: translateX(-420px) scale(.85);
+}
+
+.list .new-next {
+    transform: translateX(420px) scale(.85);
+}
+
+.list .hide,
+.list .new-next {
+    opacity: 0;
+    transition: opacity .5s, transform .5s;
+}
+
+.swipe {
+    width: 270px;
+    height: 200px;
+    position: absolute;
+    background-color: green;
+    border-radius: 2px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
 }
