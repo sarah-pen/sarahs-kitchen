@@ -58,6 +58,7 @@ h3 {
     font-style: normal;
     color: var(--secondary);
     font-size: 24px;
+    margin: 12px 0px;
 }
 
 /* --- Paragraph --- */
@@ -157,6 +158,10 @@ footer {
     position: relative;
 }
 
+.recipe:first-of-type {
+    margin-top: 0px;
+}
+
 /* --- Card Text --- */
 .recipe h3, .recipe p, .recipe a {
     margin: 16px 32px;
@@ -227,7 +232,57 @@ footer {
 /*        Essentials Page        */
 /* ============================= */
 
+.product {
+    width: 200px;
+    background-color: var(--primary);
+    padding: 16px;
+    margin-right: 10px;
+    border-radius: 16px;
+    scroll-snap-align: center;
+}
 
+.product img {
+    width: 100%;
+}
+
+#carousel-view {
+    transition: all 0.25s ease-in;
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    column-gap: 16px;
+    align-items: center;
+}
+
+#carousel-view, #product-list {
+    width: 100%;
+    /* max-width: 700px; */
+    transition: all 1s ease-in-out;
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+#product-list::-webkit-scrollbar {
+    display: none;
+}
+
+#prev-btn, #next-btn {
+    border: none;
+    background-color: var(--secondary);
+    cursor: pointer;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.fa-chevron-left, .fa-chevron-right {
+    color: white;
+}
 
 
 
