@@ -235,14 +235,18 @@ footer {
 .product {
     width: 200px;
     background-color: var(--primary);
-    padding: 16px;
     margin-right: 10px;
     border-radius: 16px;
     scroll-snap-align: center;
 }
 
+.product p, .product h3 {
+    padding: 0px 16px;
+}
+
 .product img {
     width: 100%;
+    border-radius: 16px 16px 0px 0px;
 }
 
 #carousel-view {
@@ -261,7 +265,7 @@ footer {
 
 #product-list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     column-gap: 16px;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
