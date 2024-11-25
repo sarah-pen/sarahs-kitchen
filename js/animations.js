@@ -27,3 +27,4 @@ next.addEventListener('click',()=>{
   console.log("Next button clicked")
   list.scrollLeft += (itemWidth + padding)
 })
+

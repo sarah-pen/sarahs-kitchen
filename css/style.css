@@ -284,6 +284,11 @@ footer {
     border-radius: 100px;
 }
 
+#prev-btn:active, #next-btn:active {
+    background-color: var(--contrast);
+}
+
+
 .fa-chevron-left, .fa-chevron-right {
     color: white;
 }
