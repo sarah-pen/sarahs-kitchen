@@ -47,7 +47,7 @@ h2 {
     font-weight: 500;
     font-style: normal;
     color: var(--secondary);
-    font-size: 32px;
+    font-size: 28px;
 }
 
 /* --- Heading 3 --- */
@@ -81,10 +81,11 @@ p {
     margin: 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    align-items: center;
 }
 
 /* --- Nav Item --- */
-.menu-item {
+.menu-item a {
     display: block;
     align-self: center;
     color: black;
@@ -106,6 +107,12 @@ p {
 footer {
     background-color: var(--secondary);
 }
+
+footer p {
+    color: white;
+}
+
+
 
 
 /* ============================= */
@@ -136,9 +143,19 @@ footer {
     width: 90%;
 }
 
-/* --- Recipe Preview --- */
-#recipes-preview, #tips-preview {
+#recipe-highlight {
     background-color: var(--tertiary);
+    margin: 0px 32px 32px 32px;
+    padding: 32px;
+    border-radius: 16px;
+}
+
+#recipe-highlight div.tags {
+    margin: 0px;
+}
+
+#recipe-highlight a {
+    color: var(--contrast);
 }
 
 
@@ -163,7 +180,7 @@ footer {
 }
 
 /* --- Card Text --- */
-.recipe h3, .recipe p, .recipe a {
+.recipe h2, .recipe p, .recipe a {
     margin: 16px 32px;
     color: var(--contrast);
 }
@@ -242,6 +259,10 @@ footer {
 
 .product p, .product h3 {
     padding: 0px 16px;
+}
+
+.product a {
+    color: var(--contrast);
 }
 
 .product img {
@@ -362,5 +383,13 @@ footer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 32px;
+    }
+
+    .recipe {
+        margin: 0px;
+    }
+
+    .product {
+        width: 260px;
     }
 }
