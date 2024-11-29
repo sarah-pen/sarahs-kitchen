@@ -62,7 +62,7 @@ h3 {
 }
 
 /* --- Paragraph --- */
-p, li {
+p, li, a {
     line-height: 1.5em;
     color: var(--contrast);
 }
@@ -94,7 +94,6 @@ p, li {
 
 /* --- Nav Item --- */
 .menu-item a {
-    color: black;
     text-decoration: none;
     display: flex; /* Flexbox for consistent alignment inside links */
     align-items: center; /* Vertically center content inside the link */
@@ -408,6 +407,10 @@ footer p {
         padding: 24px 64px;
     }
 
+    section:last-of-type {
+        margin-bottom: 32px;
+    }
+
     #menu {
         padding: 16px 0px 16px 64px;
     }
@@ -424,4 +427,50 @@ footer p {
     .product {
         width: 260px;
     }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    /* Dark mode color palette */
+    :root {
+        --primary: #366847; 
+        --secondary: #86c399; 
+        --tertiary: #605110; 
+        --contrast: #e9ffe2;
+        --background-color: #071707; 
+    }
+
+    /* --- Page Background --- */
+    html {
+        background-color: var(--background-color);
+    }
+    
+    /* --- Text Color --- */
+    body, a {
+        color: var(--contrast);
+    }
+
+    footer {
+        background-color: var(--primary);
+    }
+
+    .tip-category {
+        background-color: var(--background-color);
+    }
+
+    .tip-category:hover {
+        background-color: #193619;
+    }
+
+    .panel {
+        background-color: var(--background-color);
+    }
+
+    .fa-solid {
+        color: white;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
 }
