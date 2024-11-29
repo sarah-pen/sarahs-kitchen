@@ -39,21 +39,22 @@ if (document.getElementsByClassName("tip-category").length > 0) {
       this.classList.toggle("active"); // Toggle active class for the accordion button
 
       const panel = this.nextElementSibling; // Target the panel
-      const icon = this.parentElement.querySelector("i"); // Locate the <i> element
+      const icon = this.querySelector("i"); // Locate the <i> element
 
-      if (panel.classList.contains("open")) {
-        panel.classList.remove("open"); // Hide panel
-        // Update the icon class for the collapsed state
+      if (panel.style.maxHeight) {
+        // Panel is open, collapse it
+        panel.style.maxHeight = null;
         if (icon) {
-          icon.className = "fa-solid fa-chevron-down";
+          icon.className = "fa-solid fa-chevron-down"; // Collapsed state icon
         }
       } else {
-        panel.classList.add("open"); // Show panel
-        // Update the icon class for the expanded state
+        // Panel is closed, expand it
+        panel.style.maxHeight = panel.scrollHeight + "px"; // Dynamic height
         if (icon) {
-          icon.className = "fa-solid fa-chevron-up";
+          icon.className = "fa-solid fa-chevron-up"; // Expanded state icon
         }
       }
     });
   }
 }
+
