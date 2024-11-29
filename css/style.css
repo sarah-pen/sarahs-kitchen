@@ -62,10 +62,12 @@ h3 {
 }
 
 /* --- Paragraph --- */
-p {
+p, li {
     line-height: 1.5em;
     color: var(--contrast);
 }
+
+
 
 
 /* ============================= */
@@ -77,26 +79,34 @@ p {
     z-index: 99;
     list-style: none;
     background-color: var(--primary);
-    padding: 0px;
+    padding: 8px 8px 8px 32px;
     margin: 0px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Align items vertically */
+    justify-content: start; /* Adjust to center or space items as needed */
+}
+
+/* --- Menu Item --- */
+.menu-item {
+    margin-right: 2vw;
+    padding: 0; /* Remove unnecessary padding on the container */
 }
 
 /* --- Nav Item --- */
 .menu-item a {
-    display: block;
-    align-self: center;
     color: black;
     text-decoration: none;
+    display: flex; /* Flexbox for consistent alignment inside links */
+    align-items: center; /* Vertically center content inside the link */
+    padding: 16px; /* Adjust padding for proper spacing */
 }
 
 /* --- Nav Icon --- */
 #menu img {
     width: 30px;
-    padding: 16px 32px;
+    margin-right: 8px; /* Add spacing between icon and text if needed */
 }
+
 
 
 /* ============================= */
@@ -143,18 +153,17 @@ footer p {
     width: 90%;
 }
 
-#recipe-highlight {
+#highlight-container {
     background-color: var(--tertiary);
-    margin: 0px 32px 32px 32px;
     padding: 32px;
     border-radius: 16px;
 }
 
-#recipe-highlight div.tags {
+#highlight-container div.tags {
     margin: 0px;
 }
 
-#recipe-highlight a {
+#highlight-container a {
     color: var(--contrast);
 }
 
@@ -162,6 +171,10 @@ footer p {
 /* ============================= */
 /*         Recipes Page          */
 /* ============================= */
+
+#recipes {
+    margin-bottom: 8px;
+}
 
 /* --- Recipe Card --- */
 .recipe {
@@ -181,7 +194,7 @@ footer p {
 
 /* --- Card Text --- */
 .recipe h2, .recipe p, .recipe a {
-    margin: 16px 32px;
+    margin: 16px 24px;
     color: var(--contrast);
 }
 
@@ -213,7 +226,7 @@ footer p {
 
 .back a {
     display: block;
-    padding: 16px 0px;
+    padding: 16px 16px;
     border-radius: 64px;
     text-align: center;
     text-decoration: none;
@@ -232,7 +245,7 @@ footer p {
 }
 
 .tags {
-    margin: 16px 32px;
+    margin: 16px 24px;
 }
 
 .tags p {
@@ -268,6 +281,11 @@ footer p {
 .product img {
     width: 100%;
     border-radius: 16px 16px 0px 0px;
+}
+
+.product:hover {
+    box-sizing: border-box;
+    border: 4px dashed var(--tertiary);
 }
 
 #carousel-view {
@@ -320,11 +338,16 @@ footer p {
 /*           Tips Page           */
 /* ============================= */
 
-.accordion {
+#accordion {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.accordion-item {
     border-bottom: 1px solid black;
 }
 
-.accordion:last-child {
+.accordion-item:last-child {
     border: none;
 }
 
@@ -379,6 +402,15 @@ footer p {
 
 
 @media (min-width: 800px) {
+
+    /* --- Main Content */
+    section, footer {
+        padding: 24px 64px;
+    }
+
+    #menu {
+        padding: 16px 0px 16px 64px;
+    }
     #recipes {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
