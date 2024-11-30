@@ -303,6 +303,10 @@
         padding: 0px 16px;
     }
 
+    .product p:first-of-type {
+        font-weight: 600;
+    }
+
     .product a {
         color: var(--contrast);
         text-decoration: none;
