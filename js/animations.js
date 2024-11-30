@@ -4,12 +4,21 @@ if (document.querySelectorAll(".recipe").length > 0) {
 
   cards.forEach((card) => {
     card.addEventListener("click", flipCard);
+    card.addEventListener("keydown", handleKeyDown); // Add keydown listener
+    card.setAttribute("tabindex", "0"); // Make card focusable with Tab
   });
 
   function flipCard() {
     this.classList.toggle("flipCard");
   }
+
+  function handleKeyDown(event) {
+    if (event.key === "Tab") {
+      this.classList.toggle("flipCard");
+    }
+  }
 }
+
 
 
 // Essentials Carousel
