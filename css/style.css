@@ -1,4 +1,4 @@
-@media (min-width: 350px) {
+@media (min-width: 320px) {
 
     /* ============================= */
     /*           General             */
@@ -91,7 +91,7 @@
         z-index: 99;
         list-style: none;
         background-color: var(--primary);
-        padding: 8px 8px 8px 32px;
+        padding: 24px 8px 24px 32px;
         margin: 0px;
         display: flex; /* Use flexbox for better alignment */
         align-items: center; /* Align items vertically */
@@ -100,7 +100,7 @@
 
     /* --- Menu Item --- */
     .menu-item {
-        margin-right: 2vw;
+        /* margin-right: 10px; */
         padding: 0; /* Remove unnecessary padding on the container */
         margin-bottom: 0px;
     }
@@ -111,6 +111,7 @@
         display: flex; /* Flexbox for consistent alignment inside links */
         align-items: center; /* Vertically center content inside the link */
         padding: 16px; /* Adjust padding for proper spacing */
+        padding-left: 8px;
         margin-bottom: 0px;
     }
 
