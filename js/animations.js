@@ -11,6 +11,7 @@ if (document.querySelectorAll(".recipe").length > 0) {
   }
 }
 
+
 // Essentials Carousel
 if (document.getElementById('product-list')) {
   const prev = document.getElementById('prev-btn');

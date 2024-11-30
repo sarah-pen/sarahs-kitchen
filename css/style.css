@@ -1,410 +1,427 @@
-/* ============================= */
-/*           General             */
-/* ============================= */
-
-/* --- Color Palette --- */
-:root {
-    --primary: #73b288;
-    --secondary: #2b5338;
-    --tertiary: #e5ce6a;
-    --contrast: #0d1710;
-}
-
-/* --- General Styling --- */
-body {
-    margin: 0px;
-    font-family: "Kantumruy Pro", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--contrast);
-    font-size: 18px;
-}
-
-/* --- Main Content */
-section, footer {
-    padding: 16px 32px;
-}
-
-/* ============================= */
-/*         Typography            */
-/* ============================= */
-
-/* --- Heading 1 --- */
-h1 {
-    font-family: "Gamja Flower", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 56px;
-    text-align: center;
-    color: var(--secondary);
-}
-
-/* --- Heading 2 --- */
-h2 {
-    font-family: "Kantumruy Pro", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    color: var(--secondary);
-    font-size: 28px;
-}
-
-/* --- Heading 3 --- */
-h3 {
-    font-family: "Kantumruy Pro", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    color: var(--secondary);
-    font-size: 24px;
-    margin: 12px 0px;
-}
-
-/* --- Paragraph --- */
-p, li, a {
-    line-height: 1.5em;
-    color: var(--contrast);
-}
-
-
-
-
-/* ============================= */
-/*           Nav Bar             */
-/* ============================= */
-
-/* --- Container --- */
-#menu {
-    z-index: 99;
-    list-style: none;
-    background-color: var(--primary);
-    padding: 8px 8px 8px 32px;
-    margin: 0px;
-    display: flex; /* Use flexbox for better alignment */
-    align-items: center; /* Align items vertically */
-    justify-content: start; /* Adjust to center or space items as needed */
-}
-
-/* --- Menu Item --- */
-.menu-item {
-    margin-right: 2vw;
-    padding: 0; /* Remove unnecessary padding on the container */
-}
-
-/* --- Nav Item --- */
-.menu-item a {
-    text-decoration: none;
-    display: flex; /* Flexbox for consistent alignment inside links */
-    align-items: center; /* Vertically center content inside the link */
-    padding: 16px; /* Adjust padding for proper spacing */
-}
-
-/* --- Nav Icon --- */
-#menu img {
-    width: 30px;
-    margin-right: 8px; /* Add spacing between icon and text if needed */
-}
-
-
-
-/* ============================= */
-/*            Footer             */
-/* ============================= */
-
-/* --- Container --- */
-footer {
-    background-color: var(--secondary);
-}
-
-footer p {
-    color: white;
-}
-
-
-
-
-/* ============================= */
-/*           Homepage            */
-/* ============================= */
-
-/* --- Container --- */
-#banner {
-    position: relative;
-    padding: 0px;
-}
-
-/* --- Background Image --- */
-#banner img {
-    width: 100%;
-    height: 200px;
-    opacity: 0.3;
-    object-fit: cover;
-}
-
-/* --- Title --- */
-#banner h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0px 0px;
-    width: 90%;
-}
-
-#highlight-container {
-    background-color: var(--tertiary);
-    padding: 32px;
-    border-radius: 16px;
-}
-
-#highlight-container div.tags {
-    margin: 0px;
-}
-
-#highlight-container a {
-    color: var(--contrast);
-}
-
-
-/* ============================= */
-/*         Recipes Page          */
-/* ============================= */
-
-#recipes {
-    margin-bottom: 8px;
-}
-
-/* --- Recipe Card --- */
-.recipe {
-    margin: 32px 0px;
-    padding-bottom: 8px;
-    /* border: 2px solid var(--secondary); */
-    border-radius: 16px;
-    background-color: var(--tertiary);
-    transform-style: preserve-3d;
-    transition: all 0.9s ease;
-    position: relative;
-}
-
-.recipe:first-of-type {
-    margin-top: 0px;
-}
-
-/* --- Card Text --- */
-.recipe h2, .recipe p, .recipe a {
-    margin: 16px 24px;
-    color: var(--contrast);
-}
-
-/* --- Card Image --- */
-.recipe img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 16px;
-    border-top-right-radius: 16px;
-    /* border-bottom: 2px solid var(--secondary); */
-}
-
-/* --- Front of Flip Card --- */
-.front {
-    backface-visibility: hidden;
-}
-
-/* --- Back of Flip Card --- */
-.back {
-    position: absolute;
-    top: 16px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-}
-
-.back a {
-    display: block;
-    padding: 16px 16px;
-    border-radius: 64px;
-    text-align: center;
-    text-decoration: none;
-    background-color: var(--primary);
-    font-weight: 600;
-}
-
-.back a:hover {
-    text-decoration: underline;
-    background-color: #649a76;
-}
-
-/* --- Flip Card Transition --- */
-.flipCard {
-    transform: rotateY(180deg);
-}
-
-.tags {
-    margin: 16px 24px;
-}
-
-.tags p {
-    display: inline-block;
-    padding: 8px 16px;
-    margin: 0px 8px 0px 0px;
-    border: 2px solid var(--contrast);
-    border-radius: 64px;
-
-}
-
-
-/* ============================= */
-/*        Essentials Page        */
-/* ============================= */
-
-.product {
-    width: 200px;
-    background-color: var(--primary);
-    margin-right: 10px;
-    border-radius: 16px;
-    scroll-snap-align: center;
-}
-
-.product p, .product h3 {
-    padding: 0px 16px;
-}
-
-.product a {
-    color: var(--contrast);
-}
-
-.product img {
-    width: 100%;
-    border-radius: 16px 16px 0px 0px;
-}
-
-.product:hover {
-    box-sizing: border-box;
-    border: 4px dashed var(--tertiary);
-}
-
-#carousel-view {
-    transition: all 0.25s ease-in;
-    display: grid;
-    grid-template-columns: 40px 1fr 40px;
-    column-gap: 16px;
-    align-items: center;
-}
-
-#carousel-view, #product-list {
-    width: 100%;
-    /* max-width: 700px; */
-    transition: all 1s ease-in-out;
-}
-
-#product-list {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    column-gap: 16px;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    overflow: auto;
-}
-
-#product-list::-webkit-scrollbar {
-    display: none;
-}
-
-#prev-btn, #next-btn {
-    border: none;
-    background-color: var(--secondary);
-    cursor: pointer;
-    height: 40px;
-    border-radius: 100px;
-}
-
-#prev-btn:active, #next-btn:active {
-    background-color: var(--contrast);
-}
-
-
-.fa-chevron-left, .fa-chevron-right {
-    color: white;
-}
-
-
-
-/* ============================= */
-/*           Tips Page           */
-/* ============================= */
-
-#accordion {
-    border-radius: 16px;
-    overflow: hidden;
-}
-
-.accordion-item {
-    border-bottom: 1px solid black;
-}
-
-.accordion-item:last-child {
-    border: none;
-}
-
-.tip-category {
-    background-color: white;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.tip-category:hover {
-    background-color: #def1e4;
-}
-  
-  /* Style the accordion panel. Note: hidden by default */
-.panel {
-    padding: 0px 18px;
-    max-height: 0;
-    background-color: white;
-    /* display: none; */
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
-
-.panel.open {
-    /* display: block; */
-    /* max-height: fit-content; */
-    transition: max-height 0.3s ease-in;
-    padding-bottom: 16px;
-}
-
-.panel ul {
-    padding-bottom: 4px;
-}
-
-.panel ul li {
-    list-style-type: square;
-    margin-bottom: 10px;
-}
-  
+@media (min-width: 350px) {
+
+    /* ============================= */
+    /*           General             */
+    /* ============================= */
+
+    /* --- Color Palette --- */
+    :root {
+        --primary: #73b288;
+        --secondary: #2b5338;
+        --tertiary: #e5ce6a;
+        --contrast: #0d1710;
+    }
+
+    /* --- General Styling --- */
+    body {
+        margin: 0px;
+        font-family: "Kantumruy Pro", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--contrast);
+        font-size: 18px;
+    }
+
+    /* --- Main Content */
+    section {
+        padding: 16px 32px;
+    }
+
+    /* ============================= */
+    /*         Typography            */
+    /* ============================= */
+
+    /* --- Heading 1 --- */
+    h1 {
+        font-family: "Gamja Flower", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 56px;
+        text-align: center;
+        color: var(--secondary);
+        margin-bottom: 12px;
+    }
+
+    /* --- Heading 2 --- */
+    h2 {
+        font-family: "Kantumruy Pro", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: var(--secondary);
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    /* --- Heading 3 --- */
+    h3 {
+        font-family: "Kantumruy Pro", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        color: var(--secondary);
+        font-size: 24px;
+        margin: 12px 0px;
+    }
+
+    /* --- Paragraph --- */
+    p, li, a {
+        line-height: 1.5em;
+        color: var(--contrast);
+        margin-bottom: 12px;
+
+    }
+
+
+
+
+
+
+    /* ============================= */
+    /*           Nav Bar             */
+    /* ============================= */
+
+    /* --- Container --- */
+    #menu {
+        z-index: 99;
+        list-style: none;
+        background-color: var(--primary);
+        padding: 8px 8px 8px 32px;
+        margin: 0px;
+        display: flex; /* Use flexbox for better alignment */
+        align-items: center; /* Align items vertically */
+        justify-content: start; /* Adjust to center or space items as needed */
+    }
+
+    /* --- Menu Item --- */
+    .menu-item {
+        margin-right: 2vw;
+        padding: 0; /* Remove unnecessary padding on the container */
+        margin-bottom: 0px;
+    }
+
+    /* --- Nav Item --- */
+    .menu-item a {
+        text-decoration: none;
+        display: flex; /* Flexbox for consistent alignment inside links */
+        align-items: center; /* Vertically center content inside the link */
+        padding: 16px; /* Adjust padding for proper spacing */
+        margin-bottom: 0px;
+    }
+
+    /* --- Nav Icon --- */
+    #menu img {
+        width: 30px;
+        margin-right: 8px; /* Add spacing between icon and text if needed */
+    }
+
+
+
+    /* ============================= */
+    /*            Footer             */
+    /* ============================= */
+
+    /* --- Container --- */
+    footer {
+        background-color: var(--secondary);
+        padding: 40px 32px;
+    }
+
+    footer p {
+        color: white;
+    }
+
+
+
+
+    /* ============================= */
+    /*           Homepage            */
+    /* ============================= */
+
+    /* --- Container --- */
+    #banner {
+        position: relative;
+        padding: 0px;
+    }
+
+    /* --- Background Image --- */
+    #banner img {
+        width: 100%;
+        height: 200px;
+        opacity: 0.3;
+        object-fit: cover;
+    }
+
+    /* --- Title --- */
+    #banner h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0px 0px;
+        width: 90%;
+    }
+
+    #highlight-container {
+        background-color: var(--tertiary);
+        padding: 32px;
+        border-radius: 16px;
+    }
+
+    #highlight-container div.tags {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    #highlight-container a {
+        color: var(--contrast);
+    }
+
+
+    /* ============================= */
+    /*         Recipes Page          */
+    /* ============================= */
+
+    #recipes {
+        margin-bottom: 8px;
+    }
+
+    /* --- Recipe Card --- */
+    .recipe {
+        margin: 32px 0px;
+        padding-bottom: 8px;
+        /* border: 2px solid var(--secondary); */
+        border-radius: 16px;
+        background-color: var(--tertiary);
+        transform-style: preserve-3d;
+        transition: all 0.9s ease;
+        position: relative;
+    }
+
+    .recipe:first-of-type {
+        margin-top: 0px;
+    }
+
+    /* --- Card Text --- */
+    .recipe h2, .recipe p, .recipe a {
+        margin: 16px 24px;
+        color: var(--contrast);
+    }
+
+    /* --- Card Image --- */
+    .recipe img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        /* border-bottom: 2px solid var(--secondary); */
+    }
+
+    /* --- Front of Flip Card --- */
+    .front {
+        backface-visibility: hidden;
+    }
+
+    /* --- Back of Flip Card --- */
+    .back {
+        position: absolute;
+        top: 16px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+    }
+
+    .back a {
+        display: block;
+        padding: 16px 16px;
+        border-radius: 64px;
+        text-align: center;
+        text-decoration: none;
+        background-color: var(--primary);
+        font-weight: 600;
+    }
+
+    .back a:hover {
+        text-decoration: underline;
+        background-color: #649a76;
+    }
+
+    /* --- Flip Card Transition --- */
+    .flipCard {
+        transform: rotateY(180deg);
+    }
+
+    .tags {
+        margin: 16px 24px;
+    }
+
+    .tags p {
+        display: inline-block;
+        padding: 8px 16px;
+        margin: 0px 8px 0px 0px;
+        border: 2px solid var(--contrast);
+        border-radius: 64px;
+
+    }
+
+
+    /* ============================= */
+    /*        Essentials Page        */
+    /* ============================= */
+
+    .product {
+        width: 200px;
+        background-color: var(--primary);
+        margin-right: 10px;
+        border-radius: 16px;
+        scroll-snap-align: center;
+    }
+
+    .product p, .product h3 {
+        padding: 0px 16px;
+    }
+
+    .product a {
+        color: var(--contrast);
+        text-decoration: none;
+    }
+
+    .product img {
+        width: 100%;
+        border-radius: 16px 16px 0px 0px;
+    }
+
+    .product:hover {
+        box-sizing: border-box;
+        border: 4px dashed var(--tertiary);
+    }
+
+    #carousel-view {
+        transition: all 0.25s ease-in;
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        column-gap: 16px;
+        align-items: center;
+    }
+
+    #carousel-view, #product-list {
+        width: 100%;
+        /* max-width: 700px; */
+        transition: all 1s ease-in-out;
+    }
+
+    #product-list {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        column-gap: 16px;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        overflow: auto;
+    }
+
+    #product-list::-webkit-scrollbar {
+        display: none;
+    }
+
+    #prev-btn, #next-btn {
+        border: none;
+        background-color: var(--secondary);
+        cursor: pointer;
+        height: 40px;
+        border-radius: 100px;
+    }
+
+    #prev-btn:active, #next-btn:active {
+        background-color: var(--contrast);
+    }
+
+
+    .fa-chevron-left, .fa-chevron-right {
+        color: white;
+    }
+
+
+
+    /* ============================= */
+    /*           Tips Page           */
+    /* ============================= */
+
+    #accordion {
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .accordion-item {
+        border-bottom: 1px solid black;
+    }
+
+    .accordion-item:last-child {
+        border: none;
+    }
+
+    .tip-category {
+        background-color: white;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .tip-category:hover {
+        background-color: #def1e4;
+    }
+    
+    /* Style the accordion panel. Note: hidden by default */
+    .panel {
+        padding: 0px 18px;
+        max-height: 0;
+        background-color: white;
+        /* display: none; */
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .panel.open {
+        /* display: block; */
+        /* max-height: fit-content; */
+        transition: max-height 0.3s ease-in;
+        padding-bottom: 16px;
+    }
+
+    .panel ul {
+        padding-bottom: 4px;
+    }
+
+    .panel ul li {
+        list-style-type: square;
+        margin-bottom: 10px;
+    }
+}  
 
 
 
 @media (min-width: 800px) {
 
     /* --- Main Content */
-    section, footer {
+    section {
         padding: 24px 64px;
+    }
+
+    footer {
+        padding: 40px 64px;
     }
 
     section:last-of-type {
@@ -473,4 +490,7 @@ footer p {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    
+
+
 }
