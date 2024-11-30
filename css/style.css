@@ -28,6 +28,10 @@
         padding: 16px 32px;
     }
 
+    section:last-of-type {
+        margin-bottom: 32px;
+    }
+
     /* ============================= */
     /*         Typography            */
     /* ============================= */
@@ -110,6 +114,15 @@
         margin-bottom: 0px;
     }
 
+    .menu-item a:hover {
+        font-weight: 600;
+        font-style: italic;
+    }
+
+    .menu-item a:active {
+        text-decoration: underline;
+    }
+
     /* --- Nav Icon --- */
     #menu img {
         width: 30px;
@@ -177,6 +190,11 @@
     #highlight-container a {
         color: var(--contrast);
     }
+
+    #highlight-container a:hover {
+        font-weight: 600;
+    }
+
 
 
     /* ============================= */
@@ -386,12 +404,16 @@
     
     /* Style the accordion panel. Note: hidden by default */
     .panel {
-        padding: 0px 18px;
+        padding: 0px 16px;
         max-height: 0;
         background-color: white;
         /* display: none; */
         overflow: hidden;
         transition: max-height 0.3s ease-out;
+    }
+
+    .tip-category.active, .panel {
+        background-color: #def1e4;
     }
 
     .panel.open {
@@ -403,6 +425,7 @@
 
     .panel ul {
         padding-bottom: 4px;
+        margin: 16px 24px;
     }
 
     .panel ul li {
@@ -424,10 +447,6 @@
         padding: 40px 64px;
     }
 
-    section:last-of-type {
-        margin-bottom: 32px;
-    }
-
     #menu {
         padding: 16px 0px 16px 64px;
     }
@@ -443,6 +462,12 @@
 
     .product {
         width: 260px;
+    }
+
+    #accordion {
+        width: 70%;
+        margin: auto;
+        margin-top: 24px;
     }
 }
 
@@ -479,6 +504,7 @@
         background-color: #193619;
     }
 
+
     .panel {
         background-color: var(--background-color);
     }
@@ -491,6 +517,15 @@
 
 @media (prefers-reduced-motion: reduce) {
     
+    .back {
+        position: static;
+        backface-visibility: visible;
+        transform: none;
+        height: fit-content;
+    }
 
+    .flipCard {
+        transform: none;
+    }
 
 }
