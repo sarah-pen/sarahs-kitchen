@@ -508,9 +508,12 @@
         background-color: #193619;
     }
 
-
     .panel {
         background-color: var(--background-color);
+    }
+
+    .tip-category.active, .panel {
+        background-color: #193619;
     }
 
     .fa-solid {
