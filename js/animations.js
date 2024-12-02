@@ -4,8 +4,8 @@ if (document.querySelectorAll(".recipe").length > 0) {
 
   cards.forEach((card) => {
     card.addEventListener("click", flipCard);
-    card.addEventListener("keydown", handleKeyDown); // Add keydown listener
-    card.setAttribute("tabindex", "0"); // Make card focusable with Tab
+    card.addEventListener("keydown", handleKeyDown); 
+    card.setAttribute("tabindex", "0"); 
   });
 
   function flipCard() {
@@ -46,22 +46,20 @@ if (document.getElementsByClassName("tip-category").length > 0) {
 
   for (let i = 0; i < acc.length; i++) {
     acc[i].addEventListener("click", function () {
-      this.classList.toggle("active"); // Toggle active class for the accordion button
+      this.classList.toggle("active"); 
 
-      const panel = this.nextElementSibling; // Target the panel
-      const icon = this.querySelector("i"); // Locate the <i> element
+      const panel = this.nextElementSibling; 
+      const icon = this.querySelector("i"); 
 
       if (panel.style.maxHeight) {
-        // Panel is open, collapse it
         panel.style.maxHeight = null;
         if (icon) {
-          icon.className = "fa-solid fa-chevron-down"; // Collapsed state icon
+          icon.className = "fa-solid fa-chevron-down"; 
         }
       } else {
-        // Panel is closed, expand it
-        panel.style.maxHeight = panel.scrollHeight + "px"; // Dynamic height
+        panel.style.maxHeight = panel.scrollHeight + "px"; 
         if (icon) {
-          icon.className = "fa-solid fa-chevron-up"; // Expanded state icon
+          icon.className = "fa-solid fa-chevron-up"; 
         }
       }
     });

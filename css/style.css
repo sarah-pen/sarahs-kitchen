@@ -1,3 +1,8 @@
+/* ============================= */
+/*            Mobile             */
+/* ============================= */
+
+
 @media (min-width: 320px) {
 
     /* ============================= */
@@ -23,11 +28,12 @@
         font-size: 18px;
     }
 
-    /* --- Main Content */
+    /* --- Main Content --- */
     section {
         padding: 16px 32px;
     }
 
+    /* --- Bottom Section --- */
     section:last-of-type {
         margin-bottom: 32px;
     }
@@ -69,18 +75,13 @@
         margin: 12px 0px;
     }
 
-    /* --- Paragraph --- */
+    /* --- Paragraph, List Item, Link --- */
     p, li, a {
         line-height: 1.5em;
         color: var(--contrast);
         margin-bottom: 12px;
 
     }
-
-
-
-
-
 
     /* ============================= */
     /*           Nav Bar             */
@@ -115,11 +116,13 @@
         margin-bottom: 0px;
     }
 
+    /* --- Nav Item on Hover --- */
     .menu-item a:hover {
         font-weight: 600;
         font-style: italic;
     }
 
+    /* --- Nav Item on Click --- */
     .menu-item a:active {
         text-decoration: underline;
     }
@@ -129,8 +132,6 @@
         width: 30px;
         margin-right: 8px; /* Add spacing between icon and text if needed */
     }
-
-
 
     /* ============================= */
     /*            Footer             */
@@ -142,18 +143,16 @@
         padding: 40px 32px;
     }
 
+    /* --- Footer Text --- */
     footer p {
         color: white;
     }
-
-
-
 
     /* ============================= */
     /*           Homepage            */
     /* ============================= */
 
-    /* --- Container --- */
+    /* --- Section --- */
     #banner {
         position: relative;
         padding: 0px;
@@ -177,31 +176,34 @@
         width: 90%;
     }
 
+    /* --- Content Container --- */
     #highlight-container {
         background-color: var(--tertiary);
         padding: 32px;
         border-radius: 16px;
     }
 
+    /* --- "Recipe Highlight" Tag --- */
     #highlight-container div.tags {
         margin-left: 0px;
         margin-top: 0px;
     }
 
+    /* --- Recipe Link --- */
     #highlight-container a {
         color: var(--contrast);
     }
 
+    /* --- Recipe Link on Hover --- */
     #highlight-container a:hover {
         font-weight: 600;
     }
-
-
 
     /* ============================= */
     /*         Recipes Page          */
     /* ============================= */
 
+    /* --- Section --- */
     #recipes {
         margin-bottom: 8px;
     }
@@ -218,6 +220,7 @@
         position: relative;
     }
 
+    /* --- Top Recipe Card --- */
     .recipe:first-of-type {
         margin-top: 0px;
     }
@@ -235,7 +238,6 @@
         object-fit: cover;
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
-        /* border-bottom: 2px solid var(--secondary); */
     }
 
     /* --- Front of Flip Card --- */
@@ -254,6 +256,7 @@
         transform: rotateY(180deg);
     }
 
+    /* --- Recipe Link Button --- */
     .back a {
         display: block;
         padding: 16px 16px;
@@ -264,6 +267,7 @@
         font-weight: 600;
     }
 
+    /* --- Recipe Link Button on Hover --- */
     .back a:hover {
         text-decoration: underline;
         background-color: #649a76;
@@ -274,10 +278,12 @@
         transform: rotateY(180deg);
     }
 
+    /* --- Recipe Tags --- */
     .tags {
         margin: 16px 24px;
     }
 
+    /* --- Recipe Tags Text --- */
     .tags p {
         display: inline-block;
         padding: 8px 16px;
@@ -287,11 +293,11 @@
 
     }
 
-
     /* ============================= */
     /*        Essentials Page        */
     /* ============================= */
 
+    /* --- Product Item --- */
     .product {
         width: 200px;
         background-color: var(--primary);
@@ -300,29 +306,35 @@
         scroll-snap-align: center;
     }
 
-    .product p, .product h3 {
+    /* --- Product Details --- */
+    .product p {
         padding: 0px 16px;
     }
 
+    /* --- Product Name --- */
     .product p:first-of-type {
         font-weight: 600;
     }
 
+    /* --- Product Link --- */
     .product a {
         color: var(--contrast);
         text-decoration: none;
     }
 
+    /* --- Product Image --- */
     .product img {
         width: 100%;
         border-radius: 16px 16px 0px 0px;
     }
 
+    /* --- Product on Hover --- */
     .product:hover {
         box-sizing: border-box;
         border: 4px dashed var(--tertiary);
     }
 
+    /* --- Carousel Container --- */
     #carousel-view {
         transition: all 0.25s ease-in;
         display: grid;
@@ -331,12 +343,14 @@
         align-items: center;
     }
 
+    /* --- Carousel Container and Product Row --- */
     #carousel-view, #product-list {
         width: 100%;
         /* max-width: 700px; */
         transition: all 1s ease-in-out;
     }
 
+    /* --- Product Row --- */
     #product-list {
         display: grid;
         grid-template-columns: repeat(7, 1fr);
@@ -346,10 +360,12 @@
         overflow: auto;
     }
 
+    /* --- Disable Horizontal Scrollbar --- */
     #product-list::-webkit-scrollbar {
         display: none;
     }
 
+    /* --- Carousel Arrows --- */
     #prev-btn, #next-btn {
         border: none;
         background-color: var(--secondary);
@@ -358,34 +374,37 @@
         border-radius: 100px;
     }
 
+    /* --- Carousel Arrows on Click --- */
     #prev-btn:active, #next-btn:active {
         background-color: var(--contrast);
     }
 
-
+    /* --- Arrow Icon Color --- */
     .fa-chevron-left, .fa-chevron-right {
         color: white;
     }
-
-
 
     /* ============================= */
     /*           Tips Page           */
     /* ============================= */
 
+    /* --- Accordion Container --- */
     #accordion {
         border-radius: 16px;
         overflow: hidden;
     }
 
+    /* --- Accordion Item --- */
     .accordion-item {
         border-bottom: 1px solid black;
     }
 
+    /* --- Bottom Accordion Item --- */
     .accordion-item:last-child {
         border: none;
     }
 
+    /* --- Category Titles --- */
     .tip-category {
         background-color: white;
         color: #444;
@@ -402,12 +421,12 @@
 
     }
     
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    /* --- Category Title on Hover --- */
     .tip-category:hover {
         background-color: #def1e4;
     }
     
-    /* Style the accordion panel. Note: hidden by default */
+    /* --- Accordion Item Panel --- */
     .panel {
         padding: 0px 16px;
         max-height: 0;
@@ -417,10 +436,12 @@
         transition: max-height 0.3s ease-out;
     }
 
+    /* --- Active Category Title and Panel --- */
     .tip-category.active, .panel {
         background-color: #def1e4;
     }
 
+    /* --- Open Panel --- */
     .panel.open {
         /* display: block; */
         /* max-height: fit-content; */
@@ -428,11 +449,13 @@
         padding-bottom: 16px;
     }
 
+    /* --- Panel List --- */
     .panel ul {
         padding-bottom: 4px;
         margin: 16px 24px;
     }
 
+    /* --- Panel List Item --- */
     .panel ul li {
         list-style-type: square;
         margin-bottom: 10px;
@@ -441,20 +464,28 @@
 
 
 
+/* ============================= */
+/*            Desktop            */
+/* ============================= */
+
 @media (min-width: 800px) {
 
-    /* --- Main Content */
+    /* --- Sections */
     section {
         padding: 24px 64px;
     }
 
+    /* --- Footer --- */
     footer {
         padding: 40px 64px;
     }
 
+    /* --- Nav Menu --- */
     #menu {
         padding: 16px 0px 16px 64px;
     }
+
+    /* --- Recipes Section --- */
     #recipes {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -462,28 +493,38 @@
         row-gap: 32px;
     }
 
+    /* --- Recipe Card --- */
     .recipe {
         margin: 0px;
     }
 
+    /* --- Carousel Item --- */
     .product {
         width: 260px;
     }
 
+    /* --- Accordion Container --- */
     #accordion {
         width: 70%;
         margin: auto;
         margin-top: 24px;
     }
 
+    /* --- Recipe Tags Text --- */
     .tags p {
         margin-bottom: 8px;
     }
 }
 
+
+
+/* ============================= */
+/*           Dark Mode           */
+/* ============================= */
+
 @media (prefers-color-scheme: dark) {
 
-    /* Dark mode color palette */
+    /* --- Color Palette --- */
     :root {
         --primary: #366847; 
         --secondary: #86c399; 
@@ -502,34 +543,47 @@
         color: var(--contrast);
     }
 
+    /* --- Footer Background --- */
     footer {
         background-color: var(--primary);
     }
 
+    /* --- Accordion Category Title --- */
     .tip-category {
         background-color: var(--background-color);
     }
 
+    /* --- Accordion Category Title on Hover --- */
     .tip-category:hover {
         background-color: #193619;
     }
 
+    /* --- Accordion Panel --- */
     .panel {
         background-color: var(--background-color);
     }
 
+    /* --- Active Category Title and Panel --- */
     .tip-category.active, .panel {
         background-color: #193619;
     }
 
+    /* --- Icon Color --- */
     .fa-solid {
         color: white;
     }
 
 }
 
+
+
+/* ============================= */
+/*         Reduced Motion        */
+/* ============================= */
+
 @media (prefers-reduced-motion: reduce) {
     
+    /* --- Display Back of Recipe Card --- */
     .back {
         position: static;
         backface-visibility: visible;
@@ -537,6 +591,7 @@
         height: fit-content;
     }
 
+    /* --- Disable Flip Card Animation --- */
     .flipCard {
         transform: none;
     }
